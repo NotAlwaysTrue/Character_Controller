@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Character Controller" identifier="UAVController" type="uavcontroller" description="Hit the character you want to controll \n Press 'F' to switch between your character and target character" category="Misc" maxstacksize="1" maxstacksizecharacterinventory="1" cargocontaineridentifier="" Tags="smallitem" useinhealthinterface="true" scale="0.01" impactsoundtag="impact_soft">
+    <InventoryIcon texture="%ModDir%/controller.png" sourcerect="0,0,2000,2000" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/controller.png" sourcerect="0,0,2000,2000" depth="0.6" origin="0.5,0.5" />
+    <Body width="45" height="45" density="11" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <StatusEffect type="OnUse" target="This">
+        <Sound file="Content/Items/Medical/Bandage1.ogg" range="500" />
+        <Sound file="Content/Items/Medical/Bandage2.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="UseTarget">
+        <LuaHook name="Drone.control" />
+      </StatusEffect>
+    </MeleeWeapon>
+    <!--<CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.5,0.5" anchor="CenterLeft" pivot="CenterLeft" style="ItemUI" />
+    </CustomInterface>-->
+  </Item>
+</Items>

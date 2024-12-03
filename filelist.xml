@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Proof of Concept-Character Controller" modversion="1.0.3" corepackage="False" steamworkshopid="3376908429" gameversion="1.6.19.1">
+  <Other file="%ModDir%/lua/Autorun/init.lua" />
+  <Item file="%ModDir%/Item.xml" />
+</contentpackage>

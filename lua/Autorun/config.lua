@@ -1,0 +1,1 @@
+minSwitchtime = 1000   --Switch cooldown between drones and user
